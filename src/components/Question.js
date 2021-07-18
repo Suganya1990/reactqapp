@@ -23,7 +23,7 @@ const Question = ({
   }, [question])
 
   return (
-    <div>
+    <div className='vh-100'>
       <div
         className='qst centered text-black'
         dangerouslySetInnerHTML={{ __html: question }}

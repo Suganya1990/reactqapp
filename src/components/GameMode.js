@@ -22,7 +22,9 @@ const Mode = ({ handleGameMode, data: { category, image, apiLink } }) => {
 const GameMode = ({ handleGameMode }) => {
   return (
     <div>
-      <h3 className='gMode--Title text-white'> Choose Your Category</h3>
+      <h3 className='gMode--Title text-center text-white'>
+        Choose Your Category
+      </h3>
       <div className='row justify-content-md-center text-center'>
         {Data &&
           Data.map((d) => {
