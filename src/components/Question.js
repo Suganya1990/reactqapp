@@ -23,7 +23,7 @@ const Question = ({
   }, [question])
 
   return (
-    <div className='vh-100'>
+    <div className='vh-100 d-flex align-content-center flex-wrap'>
       <div
         className='qst text-center text-black'
         dangerouslySetInnerHTML={{ __html: question }}
@@ -42,10 +42,10 @@ const Question = ({
             })
           : null}
       </div>
-      <div className='d-flex  justify-content-between align-items-center q--footer'>
+      <div className='q--footer'>
         <Counter qIndex={qIndex} numberOfQ={numberOfQ} />
         {showAnswer && (
-          <button onClick={nextQuestion} className='btn--next '>
+          <button onClick={nextQuestion} className='btn--next'>
             Next
           </button>
         )}
