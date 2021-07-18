@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import Option from './Option'
 import Counter from './Counter'
-import '../components/Question.css'
+import './Question.css'
 
 const Question = ({
   handleAnswer,
@@ -25,7 +25,7 @@ const Question = ({
   return (
     <div className='vh-100'>
       <div
-        className='qst centered text-black'
+        className='qst text-center text-black'
         dangerouslySetInnerHTML={{ __html: question }}
       ></div>
       <div className='container row justify-content-center m-0'>
