@@ -28,7 +28,7 @@ const Question = ({
         className='qst text-center text-black'
         dangerouslySetInnerHTML={{ __html: question }}
       ></div>
-      <div className='container row justify-content-center m-0'>
+      <div className='container row justify-content-center m-0 opt--container'>
         {options
           ? options.map((o) => {
               return (

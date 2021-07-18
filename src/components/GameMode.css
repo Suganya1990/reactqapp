@@ -6,9 +6,18 @@
   object-fit: cover;
   padding: none;
 }
-.gMode--Title {
-  margin: 1em 0;
-  font-family: 'Lato';
+.gMode--Container {
+  height: 100vh;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.btn--reset {
+.gMode--Title {
+  margin: 2em 0;
+  font-family: 'Lato';
+  text-align: center;
+  color: white;
+}
+.gMode--Option {
+  height: 65vh;
 }

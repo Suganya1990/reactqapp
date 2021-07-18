@@ -21,11 +21,9 @@ const Mode = ({ handleGameMode, data: { category, image, apiLink } }) => {
 }
 const GameMode = ({ handleGameMode }) => {
   return (
-    <div className='vh-100 d-flex align-content-center flex-wrap'>
-      <h3 className='vw-100 text-center gMode--Title text-white'>
-        Choose Your Category
-      </h3>
-      <div className='row justify-content-md-center text-center'>
+    <div className='gMode--Container '>
+      <h3 className=' gMode--Title'>Choose Your Category</h3>
+      <div className='row justify-content-md-center text-center gMode--Option'>
         {Data &&
           Data.map((d) => {
             return <Mode data={d} handleGameMode={handleGameMode} />
