@@ -2,12 +2,15 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import Option from './Option'
+import Counter from './Counter'
 import '../components/Question.css'
 
 const Question = ({
   handleAnswer,
   showAnswer,
   nextQuestion,
+  qIndex,
+  numberOfQ,
   data: { question, correct_answer, incorrect_answers },
 }) => {
   const [options, setOption] = useState([])
@@ -39,13 +42,14 @@ const Question = ({
             })
           : null}
       </div>
-      {showAnswer && (
-        <div className='d-flex justify-content-end'>
+      <div className='d-flex  justify-content-between align-items-center q--footer'>
+        <Counter qIndex={qIndex} numberOfQ={numberOfQ} />
+        {showAnswer && (
           <button onClick={nextQuestion} className='btn--next '>
             Next
           </button>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   )
 }

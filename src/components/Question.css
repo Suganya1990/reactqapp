@@ -25,3 +25,6 @@
 .btn--next:hover {
   background: rgb(255, 127, 80);
 }
+.q--footer {
+  height: 100px;
+}

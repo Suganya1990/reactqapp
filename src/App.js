@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import Question from './components/Question'
 import GameMode from './components/GameMode'
-
 import './App.css'
 
 const App = () => {
@@ -49,6 +48,8 @@ const App = () => {
             nextQuestion={nextQuestion}
             showAnswer={showAnswer}
             nextQuestion={nextQuestion}
+            qIndex={qIndex}
+            numberOfQ={questions.length}
           />
         )
     } else
@@ -65,7 +66,7 @@ const App = () => {
 
     if (gameOver) {
       return (
-        <div className='d-flex flex-column justify-content-center align-items-center'>
+        <div className='d-flex flex-column justify-content-center align-items-center vh-100'>
           <h3 className='score--text text-center '>Your Score is {score}</h3>
           <button
             className='btn--reset'
