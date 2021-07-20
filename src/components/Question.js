@@ -23,9 +23,9 @@ const Question = ({
   }, [question])
 
   return (
-    <div className='vh-100 d-flex align-content-center flex-wrap'>
+    <div className='q-container d-flex align-content-center flex-wrap m-auto'>
       <div
-        className='qst text-center text-black'
+        className='vw-100 qst text-center text-black'
         dangerouslySetInnerHTML={{ __html: question }}
       ></div>
       <div className='container row justify-content-center m-0 opt--container'>

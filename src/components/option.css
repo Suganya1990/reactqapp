@@ -17,3 +17,12 @@
 .btn--option:hover {
   background-color: rgb(219, 112, 147);
 }
+.btn--option:active {
+  background-color: rgb(219, 112, 147);
+}
+@media (min-width: 481px) {
+  .btn--option {
+    font-size: 1.75rem;
+    height: 100px;
+  }
+}

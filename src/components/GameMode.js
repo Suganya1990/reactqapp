@@ -6,7 +6,7 @@ import './GameMode.css'
 
 const Mode = ({ handleGameMode, data: { category, image, apiLink } }) => {
   return (
-    <div className='col-6 '>
+    <div className='col-6 text-center m-auto '>
       <img
         onClick={() => {
           handleGameMode(apiLink)
@@ -15,15 +15,15 @@ const Mode = ({ handleGameMode, data: { category, image, apiLink } }) => {
         src={image}
         alt={category}
       />
-      <p className='text-center text-white'>{category}</p>
+      <p className='text-center text-white gMode--CTitle'>{category}</p>
     </div>
   )
 }
 const GameMode = ({ handleGameMode }) => {
   return (
-    <div className='gMode--Container '>
+    <div className='gMode--Container d-flex m-auto'>
       <h3 className=' gMode--Title'>Choose Your Category</h3>
-      <div className='row justify-content-md-center text-center gMode--Option'>
+      <div className='row justify-content-md-center text-center gMode--Option m-auto'>
         {Data &&
           Data.map((d) => {
             return <Mode data={d} handleGameMode={handleGameMode} />

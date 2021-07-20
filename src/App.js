@@ -4,6 +4,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 import Question from './components/Question'
 import GameMode from './components/GameMode'
 import './App.css'
+import { purple } from '@material-ui/core/colors'
 
 const App = () => {
   const [questions, setQuestions] = useState([])
@@ -66,7 +67,7 @@ const App = () => {
 
     if (gameOver) {
       return (
-        <div className='d-flex flex-column justify-content-center align-items-center vh-100'>
+        <div className='d-flex flex-column m-auto justify-content-center align-items-center vh-100'>
           <h3 className='score--text text-center '>Your Score is {score}</h3>
           <button
             className='btn--reset'
@@ -93,7 +94,7 @@ const App = () => {
     renderContent()
   }, [Api_Url])
 
-  return <div className='container vh-100 vw-100 '>{renderContent()}</div>
+  return <div className='container vh-100 vw-100 d-flex'>{renderContent()}</div>
 }
 
 export default App
