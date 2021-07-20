@@ -1,10 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap'
 import Question from './components/Question'
 import GameMode from './components/GameMode'
 import './App.css'
-import { purple } from '@material-ui/core/colors'
 
 const App = () => {
   const [questions, setQuestions] = useState([])
@@ -19,7 +17,7 @@ const App = () => {
         setScore(score + 1)
       }
     }
-    if (qIndex == questions.length - 1) setGameOver(true)
+    if (qIndex === questions.length - 1) setGameOver(true)
 
     setShowAnswer(true)
   }
@@ -48,7 +46,6 @@ const App = () => {
             handleAnswer={handleAnswer}
             nextQuestion={nextQuestion}
             showAnswer={showAnswer}
-            nextQuestion={nextQuestion}
             qIndex={qIndex}
             numberOfQ={questions.length}
           />
@@ -91,7 +88,7 @@ const App = () => {
       .then((data) => {
         setQuestions(data.results)
       })
-    renderContent()
+      .catch((error) => console.log(error))
   }, [Api_Url])
 
   return <div className='container vh-100 vw-100 d-flex'>{renderContent()}</div>

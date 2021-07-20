@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap'
 import Option from './Option'
 import Counter from './Counter'
 import './Question.css'
@@ -19,8 +18,9 @@ const Question = ({
     let randomSort = [...incorrect_answers, correct_answer].sort(
       () => 0.5 - Math.random()
     )
+    console.log('UseEffect is being rendered')
     setOption(randomSort)
-  }, [question])
+  }, [question, incorrect_answers, correct_answer])
 
   return (
     <div className='q-container d-flex align-content-center flex-wrap m-auto'>

@@ -25,8 +25,8 @@ const GameMode = ({ handleGameMode }) => {
       <h3 className=' gMode--Title'>Choose Your Category</h3>
       <div className='row justify-content-md-center text-center gMode--Option m-auto'>
         {Data &&
-          Data.map((d) => {
-            return <Mode data={d} handleGameMode={handleGameMode} />
+          Data.map((d, i = 0) => {
+            return <Mode key={i} data={d} handleGameMode={handleGameMode} />
           })}
       </div>
     </div>
