@@ -23,6 +23,7 @@
 @media (min-width: 481px) {
   .btn--option {
     font-size: 1.75rem;
-    height: 100px;
+    height: fit-content;
+    min-height: 80px;
   }
 }
