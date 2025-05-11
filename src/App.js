@@ -32,6 +32,7 @@ const App = () => {
     setQIndex(0)
     setShowAnswer(false)
     setGameOver(false)
+    setScore(0)
   }
 
   const renderContent = () => {

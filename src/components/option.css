@@ -20,6 +20,9 @@
 .btn--option:active {
   background-color: rgb(219, 112, 147);
 }
+.answer{
+  border: 12px sold green;
+}
 @media (min-width: 481px) {
   .btn--option {
     font-size: 1.75rem;
